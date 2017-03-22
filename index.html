@@ -1,101 +1,175 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640">
+<head>
+	<title>Miao(Elena) Wang's Personal Website</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Miao(Elena) Wang">
+	<style>
+		#pageheader {background: url(image/star-465189_1920.jpg);
+		width:100%;
+		height:250px;
+		background-size:cover;
+		}
+		h1 {
 
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" media="screen">
-    <link rel="stylesheet" href="{{ '/assets/css/mobile.css' | relative_url }}" media="handheld, only screen and (max-device-width:640px)">
-    <link rel="stylesheet" href="{{ '/assets/css/non-screen.css' | relative_url }}" media="handheld, only screen and (max-device-width:640px)">
+		text-align:center;
+		left: 300px;
+        position: absolute;
+    	line-height:250px;
+    	color:AliceBlue;
+    	font-size: 40px;
+		}
+		
+		ul.bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #001a33;
+}
+#bar {
+    float: left;
+}
+li#bar a {
+    display: block;
+    color: AliceBlue;
+    text-align: center;
+    padding: 14px 110px;
+    text-decoration: none;
+    font-size:20px;
+}
 
-    <script type="text/javascript" src="{{ '/assets/js/modernizr.js' | relative_url }}"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ '/assets/js/headsmart.min.js' | relative_url }}"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-<<<<<<< HEAD
-    <title>Miao Wang Github Page</title>
-  </head>
+li#bar a:hover {
+    background-color: #111;
+}
+.para{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 12%;
+    margin-left: 12%;
+    font-size:larger;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important;
+}
+.context{
 
-  <body>
+    padding: 20px 30px 20px 30px;
+    position: relative;
 
-    <title>Miao Wan</title>
-  </head>
-
-  <body>
-    <a id="forkme_banner" href="{{ site.github.repository_url }}">GitHub</a>
-
-    <div class="shell">
-
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-
-            <h1>Miao Wang's Personal Website</h1>
-
-
-            <h2>{{ site.description | default: site.github.project_tagline }}</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
-
-      {% if site.show_downloads %}
-        <section id="downloads">
-          <span class="inner">
-            <a href="{{ site.github.zip_url }}" class="zip"><em>download</em> .ZIP</a><a href="{{ site.github.tar_url }}" class="tgz"><em>download</em> .TGZ</a>
-          </span>
-        </section>
-      {% else %}
-        <div id="no-downloads">
-          <span class="inner">
-          </span>
-        </div>
-      {% endif %}
+}
+.readmore{
+	padding: 10px 20px;
+	margin: 4px 2px;
+    font-size: 15px;
+}
+#selfphoto{
+	float :left;
+	padding :0 1em 1em 1em;
+}
+.seperate{
+	border-bottom: 1px solid grey;
+}
 
 
-      <span class="banner-fix"></span>
+	</style>
+	<style>body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+</head>
+<body>
+	<div id="pageheader"> 
+		<h1 align="center">Miao(Elena) Wang's Data Science Portfolio</h1>
+	</div>
+	<ul class = "bar">
+  		<li id = "bar" ><a class="active" href="#me">About me</a></li>
+  		<li id = "bar" ><a href="#project">Project</a></li>
+  		<li id = "bar" ><a href="#experience">Experience</a></li>
+  		<li id = "bar" ><a href="#hornor">Awards</a></li>
+	</ul>
+	<br>
+	<div class="para" id = "me">
+		<div class="context">
+        
+        <h3 align="center" style="color: #00004d">About me.</h3>
+            <img id="selfphoto" src="image/IMG_1009.jpg" style="width:170px;height:170px;" >
+            <p>My name is Miao(Elena) Wang. I am a graduate student at University of California, Davis. My master degree is in statistics. I also received my undergraduate degree in finance from Shanghai University of Finance and Economics in 2015. </p>
 
-
-      <section id="main_content">
-        {{ content }}
-      </section>
-
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            {% if site.github.is_project_page %}
-              <p>this project by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a> can be found on <a href="{{ site.github.repository_url }}">GitHub</a></p>
-            {% endif %}
-            {% if site.github.is_user_page %}
-              <p>Projects by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a> can be found on <a href="{{ site.github.repository_url }}">GitHub</a></p>
-            {% endif %}
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
-      </footer>
-
+            <p>Since I have enthusiasm about what is hidden behind the data, I want to find a full time job as a data analyst/data scientist. I have gained a lot of experience in data analysis, from data collection, data visualization to machine learning. I am familiar with multiple software (R, Matlab, SAS) and programing languages (Python and C++). </p>
+            </div>
     </div>
 
-    {% if site.google_analytics %}
-      <script type="text/javascript">
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-      </script>
-      <script type="text/javascript">
-        try {
-          var pageTracker = _gat._getTracker("{{ site.google_analytics }}");
-        pageTracker._trackPageview();
-        } catch(err) {}
-      </script>
-    {% endif %}
-  </body>
+    <div class="para" id = "project">
+    <img src = "image/IMG_3285.jpg" style="width:100%; height:200px;">
+    	<div class="context">
+        
+        <h3 align="center">Project</h3>
+        	
+            <ul class="project_list">
+            	<li class = "seperate"><b>Yelp Data Visualization and Analysis</b>
+            	<p style="font-style: italic;">  Tools: Python, Javascript, Bokeh; Mar. 2017 UC Davis</p>
+            	<p>America is a big country with multiple culture and eating styles in different places. We want to have a data-driven view of that. And yelp can provide information of food and its associated culture, which is a good resource to explore. In this situation, restaurant is the entity that we are interested in.</p>
+            	<p><span style="color: #212191">For the data collection</span>, we scraped over 20000 pages on yelp.</p>
+            	<p><span style="color: #212191">For the data exploration</span>, interactive data visualization is the biggest highlight in this project. We illustrate distributions in the different spec on map. In the descriptive statistics, we utilized bokhe and javascript to make interactive plots and show the relationship between restaurants price level, rating and area. In the end, we made network plot to mine the hidden information within different restaurants categories.</p>
+            	<p>You can visite our webpage for more detail by clicking below button. </p>
+            	<p>
+    				<button class="readmore"><a href="141B/index.html">Show here</a></button>
+				</p>
+            	</li>
+            	<br>
+				<li><b>Classifying user’s rating for movie in IMDB</b>
+				<p style="font-style: italic;">  Tools: Python, R; May 2016 UC Davis</p>
+				<p>IMDB is an online database of information related to televisions, films and so on. Users can leave comments and rate for movies. We use sentimental analysis to classify user's rating of given comments. Meanwhile metrics related with movies are also important for user's rating. Logistic, Random Forest, XGBoost and SVM are the main machine learning methods used to build a classifier.</p>
+				<p>Two parts of dataset are used in project. First dataset we used contains 50000 users’ comments, with over 80000 words appearing. In this raw dataset, we did lots of data manipulation, such as removing stop word, keeping intense sentiment words, to get the final bag of words. Second dataset comes from OMDb API (Open Movie dataset), which is about the basic information of movies appearing in the first dataset.</p>
+				<p>Before modeling, we did tf-idf transformation for comments dataset as an option. In the modeling, we used Logistic, Random Forest, XGBoost and SVM to build classifier. In the end, we chose to combine three of them together as a voting classifier, which reduces test error to 14%. </p>
+				
+				<iframe src='https://onedrive.live.com/embed?cid=62C612427949DED3&resid=62C612427949DED3%21413&authkey=ACww25Krq5oDoOI&em=2&wdAr=1.7777777777777777' width='610px' height='367px' frameborder='0'>This is an embedded <a target='_blank' href='https://office.com'>Microsoft Office</a> presentation, powered by <a target='_blank' href='https://office.com/webapps'>Office Online</a>.</iframe>
+
+
+
+
+				</li>
+            </ul>
+        </div>            
+    </div>
+
+    <div class="para" id = "experience">
+    	<div class="context">
+  
+        <h3 align="center">Experience</h3>
+            <ul>
+            	<li class = "seperate"><b>Data Scientist Intern at SENSORO</b>  
+            	<p style="font-style: italic;">  Tools: Python, Mongodb, R; June 2016 - Aug. 2016  Beijing China</p>
+            	<p>Nowaday Coupon is a good marketing tool that helps business to increase their profits.
+            	Extracted raw data from Mongodb. Applied data cleaning and feature selection and feature engineering.
+				<p> Built model to predict rate of coupon usage on WeChat social media APP for industry or brand.</p>
+				<p>Worked directly with manager to build smart pricing model that helps calculate profit for coupon campaign based on coupon type. Assisted the companies to find best coupon designing strategy to increase profit by average 20%.</p>
+				</li>
+			    <br>
+				<li ><b>Data Scientist Intern at Center for Water-Energy Efficiency</b>  
+            	<p style="font-style: italic;">  Tools: Tableau, R; Oct. 2016 – Jan. 2017; Davis</p>
+            	<p>Pulled and integrated data from several different data base by regular expression and SQL queries. Applied data visualization in Tableau to check the water usage trend.
+				<p> Mapped data according to geological location. Conducted spatial analysis and built model to predict missing value on map.</p>
+				<p>Built interactive web application to show visualization of data and model by R shiny.</p>
+				</li>
+
+            </ul>
+        </div>            
+    </div>
+
+    <div class="para" id = "hornor">
+    <img src = "image/IMG_1648.jpg" style="width:100%; height:200px;">
+    	<div class="context">
+  
+        <h3 align="center">Awards</h3>
+            <ul>
+            	<li>UC Davis Outstanding Masters Student Award, 2015-2016 Academic Year</li>
+            	<li>1st-Class Prize, Shanghai Region, China Undergraduate Mathematical Contest in Modeling, 2014</li>            	
+            </ul>
+        </div>            
+    </div>
+    <footer align="center">
+	Copyright Miao(Elena) Wang &copy; 2017
+     </footer>
+
+
+</body>
 </html>
